@@ -2,7 +2,7 @@
 set -e
 
 if [ ! -e "libevent-${LIBEVENT_VERSION}.tar.gz" ]; then
-	curl -LO "https://github.com/downloads/libevent/libevent/libevent-${LIBEVENT_VERSION}.tar.gz"  --retry 5
+	curl -LO "http://downloads.sourceforge.net/project/levent/libevent/libevent-2.0/libevent-${LIBEVENT_VERSION}.tar.gz"  --retry 5
 fi
 
 # Extract source
