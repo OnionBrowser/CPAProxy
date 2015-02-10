@@ -6,5 +6,7 @@ cp "${SDK_PATH}/usr/include/zlib.h" "${ARCH_BUILT_HEADERS_DIR}/zlib.h"
 
 # Copy ptrace.h for the Tor build process
 SDK_PATH_SIM=$(xcrun -sdk macosx --show-sdk-path)
-mkdir "${ARCH_BUILT_HEADERS_DIR}/sys/"
+if [ ! -d "${ARCH_BUILT_HEADERS_DIR}/sys/" ]; then
+  mkdir "${ARCH_BUILT_HEADERS_DIR}/sys/"
+fi
 cp "${SDK_PATH_SIM}/usr/include/sys/ptrace.h" "${ARCH_BUILT_HEADERS_DIR}/sys/"
