@@ -40,9 +40,9 @@ fi
 
 # Versions
 export MIN_IOS_VERSION="7.0"
-export OPENSSL_VERSION="1.0.2"
+export OPENSSL_VERSION="1.0.2a"
 export LIBEVENT_VERSION="2.0.22-stable"
-export TOR_VERSION="0.2.6.2-alpha"
+export TOR_VERSION="0.2.6.5-rc"
 
 BUILT_ARCHS=()
 DEVELOPER=`xcode-select --print-path`
@@ -61,12 +61,12 @@ fi
 
 # Combine build results of different archs into one
 export FINAL_BUILT_DIR="${TOPDIR}/../CPAProxyDependencies"
-if [ ! -d "${FINAL_BUILT_DIR}" ]; then
-  mkdir -p "${FINAL_BUILT_DIR}"
-else
-  echo "Final product directory CPAProxyDependencies found, skipping build..."
-  exit 0
-fi
+#if [ ! -d "${FINAL_BUILT_DIR}" ]; then
+#  mkdir -p "${FINAL_BUILT_DIR}"
+#else
+#  echo "Final product directory CPAProxyDependencies found, skipping build..."
+#  exit 0
+#fi
 
 cd ${BUILD_DIR}
 
